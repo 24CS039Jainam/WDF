@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -13,7 +14,6 @@ footer {
 }
 
 nav {
-  background: #0077b5;
   padding: 1em;
   text-align: center;
 }
@@ -37,6 +37,7 @@ main {
   margin-bottom: 30px;
 }
 
+/* Card Layout */
 .card {
   display: flex;
   justify-content: center;
@@ -48,10 +49,12 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   max-width: 1000px;
   margin: 0 auto;
+  flex-wrap: wrap; /* allow wrapping */
 }
 
 .image img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
@@ -122,4 +125,62 @@ footer nav a {
 footer nav i {
   font-size: 22px;
   margin: 0 8px;
+}
+
+/* -------------------------------
+   Media Queries for Responsiveness
+---------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .image img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .login-form {
+    max-width: 90%;
+  }
+
+  .welcome-heading {
+    font-size: 20px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  footer nav {
+    font-size: 13px;
+  }
+
+  footer nav i {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-form input,
+  .login-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    gap: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 }
