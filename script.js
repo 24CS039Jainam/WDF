@@ -45,7 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Previous button
-  const prevButton = createPageButton('Previous', currentIndex > 0 ? pages[currentIndex - 1] : null, false, currentIndex === 0);
+  // Disable Previous button on 'index.html' and 'home.html' (first two pages)
+  const prevButton = createPageButton(
+    'Previous',
+    currentIndex > 1 ? pages[currentIndex - 1] : null,
+    false,
+    currentIndex <= 1
+  );
   paginationContainer.appendChild(prevButton);
 
   // Numbered page buttons (excluding index.html)
