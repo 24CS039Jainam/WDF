@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>Results</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; }
     header, footer { background: #3b3737; color: white; padding: 1.5em; text-align: center; }
     nav { background: #0077b5; padding: 1em; text-align: center; }
     nav a { color: white; margin: 0 1em; text-decoration: none; font-weight: bold; }
-    main { background: white; padding: 2em; min-height: 400px; line-height: 1.7; }
-    .about-box { width: 85%; margin: auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); background-color: #ffffff; }
-    h2 { text-align: center; color: #333; }
-    p { margin-top: 1em; }
-    ul { margin-left: 2em; }
+    main { background: white; padding: 2em; min-height: 400px; }
+    .result-box { width: 80%; margin: auto; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2, h3 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; }
+    tr:hover { background-color: #f9f9f9; }
+    .note { text-align: center; color: green; font-style: italic; margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -35,25 +37,18 @@
     <a href="about.html">About</a>
   </nav>
   <main>
-    <div class="about-box">
-      <h2>About the Portal</h2>
-      <p>
-        The CHARUSAT Student e-Governance Portal is a centralized platform designed to streamline student access to academic, administrative, and campus services.
-      </p>
-      <p>
-        Our goal is to promote transparency, convenience, and real-time access to academic progress, course registration, fee payments, and important notices.
-      </p>
-      <h3>Key Features:</h3>
-      <ul>
-        <li>View personal profile, results, and attendance records</li>
-        <li>Access academic timetable and course information</li>
-        <li>Receive real-time notifications and notices</li>
-        <li>Contact faculty and support teams easily</li>
-        <li>Connect to CHARUSAT’s official portals directly</li>
-      </ul>
-      <p>
-        This system is built with students in mind, making their academic journey more accessible and well-managed.
-      </p>
+    <div class="result-box">
+      <h2>Semester 3 - Academic Results</h2>
+      <table>
+        <tr><th>Subject</th><th>Internal (50)</th><th>External (50)</th><th>Total</th><th>Grade</th></tr>
+        <tr><td>JAVA</td><td>48</td><td>45</td><td>93</td><td>A+</td></tr>
+        <tr><td>Discrete Math</td><td>42</td><td>38</td><td>80</td><td>B+</td></tr>
+        <tr><td>Computer Networks</td><td>44</td><td>43</td><td>87</td><td>A</td></tr>
+        <tr><td>Data Structures Algorithm</td><td>46</td><td>44</td><td>90</td><td>A+</td></tr>
+        <tr><td>Web Devlopment Frameworks</td><td>28</td><td>19</td><td>47</td><td>C</td></tr>
+      </table>
+      <h3>SGPA: 8.20</h3>
+      <p class="note">🎉 Well done! Keep improving in all areas.</p>
     </div>
   </main>
 <footer>
@@ -83,11 +78,6 @@
   </nav>
 </footer>
 
-<<<<<<< HEAD
-<script src="script.js"></script>
+
 </body>
 </html>
-=======
-</body>
-</html>         
->>>>>>> deef57585e4b0d5f5e8093431d1c1def7276e1d6

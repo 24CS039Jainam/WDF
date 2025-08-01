@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Attendance</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       background: #f5f7fa;
     }
 
-    header, footer {
+    header,
+    footer {
       background: #3b3737;
       color: white;
       padding: 1.5em;
@@ -27,70 +29,66 @@
 
     nav a {
       color: white;
-      margin: 0 0.8em;
+      margin: 0 1em;
       text-decoration: none;
       font-weight: bold;
     }
 
     main {
-      padding: 2em;
       background: white;
-      min-height: 500px;
+      padding: 2em;
+      min-height: 400px;
     }
 
-    .welcome-heading {
+    table {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 12px;
       text-align: center;
-      color: #333;
-      margin-bottom: 30px;
+      font-size: 15px;
     }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card i {
-      font-size: 36px;
-      color: #0077b5;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
+    th {
+      background-color: #e6f2fb;
       color: #333;
     }
 
-    .card p {
-      font-size: 14px;
+    .status-green {
+      color: green;
+      font-weight: bold;
+    }
+
+    .status-red {
+      color: red;
+      font-weight: bold;
+    }
+
+    .note {
+      text-align: center;
       color: #555;
+      margin-top: 10px;
+      font-style: italic;
     }
 
     footer nav {
-      padding: 20px;
       font-size: 14px;
     }
 
     footer nav a {
-      display: inline-block;
-      margin: 5px 10px;
       text-decoration: none;
       color: #ccc;
+      margin: 5px 10px;
+      display: inline-block;
     }
 
     footer nav i {
@@ -99,14 +97,15 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>CHARUSAT Student e-Governance</h1>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
+    <a href="home.html">Dashboard</a>
     <a href="profile.html">Profile</a>
     <a href="attendance.html">Attendance</a>
     <a href="results.html">Results</a>
@@ -119,58 +118,55 @@
   </nav>
 
   <main>
-    <div class="welcome-heading">
-      <h2>Welcome back, Jainam Khetani!</h2>
-      <p>Here’s a quick overview of your student dashboard.</p>
-    </div>
-
-    <div class="grid-container">
-      <div class="card">
-        <i class="fas fa-user-circle"></i>
-        <h3>View Profile</h3>
-        <p>Check your personal, academic, and mentor details.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-check-circle"></i>
-        <h3>Attendance</h3>
-        <p>Track your subject-wise attendance and eligibility.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-chart-bar"></i>
-        <h3>Results</h3>
-        <p>View your semester performance results.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-book"></i>
-        <h3>Courses</h3>
-        <p>Access enrolled subjects and credit info.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-money-bill-wave"></i>
-        <h3>Fee Details</h3>
-        <p>See your fee structure and payment history.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-clock"></i>
-        <h3>Timetable</h3>
-        <p>Check your weekly class schedule.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-bullhorn"></i>
-        <h3>Notices</h3>
-        <p>Stay updated with latest university notices.</p>
-      </div>
-    
-      <div class="card">
-        <i class="fas fa-calendar-alt"></i>
-        <h3>Academic Calendar</h3>
-        <p>Upcoming semester dates and holidays.</p>
-      </div>
-   
-    </div>
+    <h2 style="text-align:center">Attendance Dashboard - Semester 3</h2>
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Total Lectures</th>
+        <th>Attended</th>
+        <th>Percentage</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>JAVA</td>
+        <td>47</td>
+        <td>47</td>
+        <td>100%</td>
+        <td class="status-green">Perfect</td>
+      </tr>
+      <tr>
+        <td>Discrete Math</td>
+        <td>44</td>
+        <td>37</td>
+        <td>84.1%</td>
+        <td class="status-green">Okay</td>
+      </tr>
+      <tr>
+        <td>Computer Networks</td>
+        <td>46</td>
+        <td>42</td>
+        <td>91.3%</td>
+        <td class="status-green">Good</td>
+      </tr>
+      <tr>
+        <td>Data Structures Algorithm</td>
+        <td>48</td>
+        <td>45</td>
+        <td>93.75%</td>
+        <td class="status-green">Good</td>
+      </tr>
+      <tr>
+        <td>Web Development Frameworks</td>
+        <td>50</td>
+        <td>21</td>
+        <td>42%</td>
+        <td class="status-red">Low</td>
+      </tr>
+    </table>
+    <p class="note">Note: A minimum of 75% attendance is required in each subject to be eligible for exams.</p>
   </main>
 
- <footer>
+<footer>
   <nav style="color: white; text-align: center;">
     <p style="margin-bottom: 10px;">Author: Charusat</p>
 
@@ -197,10 +193,6 @@
   </nav>
 </footer>
 
-<<<<<<< HEAD
-<script src="script.js"></script>
-=======
-
->>>>>>> deef57585e4b0d5f5e8093431d1c1def7276e1d6
 </body>
+
 </html>

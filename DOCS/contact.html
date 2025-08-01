@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; }
+    body { font-family: Arial, sans-serif;
+       margin: 0; 
+       background: #f5f7fa; 
+      }
     header, footer { background: #3b3737; color: white; padding: 1.5em; text-align: center; }
     nav { background: #0077b5; padding: 1em; text-align: center; }
     nav a { color: white; margin: 0 1em; text-decoration: none; font-weight: bold; }
-    main { background: white; padding: 2em; min-height: 400px; line-height: 1.7; }
-    .about-box { width: 85%; margin: auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); background-color: #ffffff; }
+    main { background: white; padding: 2em; min-height: 400px; }
+    .contact-box { width: 85%; margin: auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
     h2 { text-align: center; color: #333; }
-    p { margin-top: 1em; }
-    ul { margin-left: 2em; }
+    form { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 500px; margin: auto; }
+    input, textarea { padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; }
+    button { background-color: #0077b5; color: white; padding: 12px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
+    button:hover { background-color: #005a8c; }
+    .info { margin-top: 2em; text-align: center; }
   </style>
 </head>
 <body>
@@ -35,25 +41,19 @@
     <a href="about.html">About</a>
   </nav>
   <main>
-    <div class="about-box">
-      <h2>About the Portal</h2>
-      <p>
-        The CHARUSAT Student e-Governance Portal is a centralized platform designed to streamline student access to academic, administrative, and campus services.
-      </p>
-      <p>
-        Our goal is to promote transparency, convenience, and real-time access to academic progress, course registration, fee payments, and important notices.
-      </p>
-      <h3>Key Features:</h3>
-      <ul>
-        <li>View personal profile, results, and attendance records</li>
-        <li>Access academic timetable and course information</li>
-        <li>Receive real-time notifications and notices</li>
-        <li>Contact faculty and support teams easily</li>
-        <li>Connect to CHARUSAT’s official portals directly</li>
-      </ul>
-      <p>
-        This system is built with students in mind, making their academic journey more accessible and well-managed.
-      </p>
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name"/>
+        <input type="email" placeholder="Your Email"/>
+        <textarea rows="5" placeholder="Your Message" ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="info">
+        <p><strong>Support Email:</strong> charusatsupport@gmail.com</p>
+        <p><strong>Phone:</strong> +91-6354071651</p>
+        <p><strong>Address:</strong> CHARUSAT University Campus, Changa, Gujarat, India</p>
+      </div>
     </div>
   </main>
 <footer>
@@ -83,11 +83,5 @@
   </nav>
 </footer>
 
-<<<<<<< HEAD
-<script src="script.js"></script>
 </body>
 </html>
-=======
-</body>
-</html>         
->>>>>>> deef57585e4b0d5f5e8093431d1c1def7276e1d6
